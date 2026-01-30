@@ -1,24 +1,24 @@
 {
-  "name": "clawdbot-onboarding-wizard",
+  "name": "openclaw-role-wizard",
   "version": "1.0.0",
-  "description": "Role-specific templates and workflows for Clawdbot - Founder, Engineer, Creator, and Student templates that enhance your ~/clawd workspace",
+  "description": "Role-specific templates and workflows for OpenClaw - Founder, Engineer, Creator, and Student templates that enhance your ~/clawd workspace",
   "main": "lib/wizard.js",
   "bin": {
-    "clawdbot-onboarding-wizard": "./bin/clawdbot-wizard",
-    "clawdbot-wizard": "./bin/clawdbot-wizard"
+    "openclaw-role-wizard": "./bin/openclaw-wizard",
+    "openclaw-wizard": "./bin/openclaw-wizard"
   },
   "scripts": {
     "test": "node examples/tests/test-wizard.js",
-    "start": "node bin/clawdbot-wizard",
+    "start": "node bin/openclaw-wizard",
     "demo": "node examples/demo/demo-run.js",
     "lint": "echo 'Linting...'",
     "dev": "node cli/index.js"
   },
   "keywords": [
-    "clawdbot",
+    "openclaw",
     "ai",
     "automation",
-    "onboarding",
+    "role-templates",
     "wizard",
     "productivity",
     "assistant",
@@ -43,10 +43,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourname/clawdbot-onboarding-wizard.git"
+    "url": "https://github.com/yanibu2777/openclaw-role-wizard.git"
   },
   "bugs": {
-    "url": "https://github.com/yourname/clawdbot-onboarding-wizard/issues"
+    "url": "https://github.com/yanibu2777/openclaw-role-wizard/issues"
   },
-  "homepage": "https://github.com/yourname/clawdbot-onboarding-wizard#readme"
+  "homepage": "https://github.com/yanibu2777/openclaw-role-wizard#readme"
 }

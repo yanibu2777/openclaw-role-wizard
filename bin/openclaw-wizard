@@ -8,8 +8,8 @@ const { version } = require('../package.json');
 const program = new Command();
 
 program
-  .name('clawdbot-onboarding-wizard')
-  .description('Add role-specific templates and workflows to your Clawdbot workspace (~/clawd)')
+  .name('openclaw-role-wizard')
+  .description('Add role-specific templates and workflows to your OpenClaw workspace (~/clawd)')
   .version(version);
 
 program
@@ -19,7 +19,7 @@ program
   .option('--skip-checks', 'Skip system requirement checks')
   .action(async (options) => {
     try {
-      console.log(chalk.blue('\n🎯 Welcome to Clawdbot Onboarding Wizard!'));
+      console.log(chalk.blue('\n🦞 Welcome to OpenClaw Role-Based Setup Wizard!'));
       console.log('Transforming "now what?" into productive AI employee...\n');
       
       await runWizard(options);

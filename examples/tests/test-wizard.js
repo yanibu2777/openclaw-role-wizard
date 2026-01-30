@@ -39,7 +39,7 @@ async function testTemplateConfig(userType, mockAnswers) {
   };
 }
 
-console.log('🧪 Testing Clawdbot Onboarding Wizard v1.0\n');
+console.log('🧪 Testing OpenClaw Role-Based Wizard v1.0\n');
 
 async function runTests() {
   try {
@@ -168,7 +168,7 @@ async function runTests() {
     
     console.log('\n🚀 Ready for real usage! Try:');
     console.log('   npm start');
-    console.log('   or: ./bin/clawdbot-wizard');
+    console.log('   or: ./bin/openclaw-wizard');
     
     return true;
     

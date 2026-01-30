@@ -1,6 +1,6 @@
-# 🧙‍♂️ Clawdbot Role-Based Setup Wizard
+# 🧙‍♂️ OpenClaw Role-Based Setup Wizard
 
-> **Go beyond basic Clawdbot setup: Get role-specific templates and workflows that make you productive immediately.**
+> **Go beyond basic OpenClaw setup: Get role-specific templates and workflows that make you productive immediately.**
 
 [![npm version](https://img.shields.io/npm/v/clawdbot-onboarding-wizard)](https://www.npmjs.com/package/clawdbot-onboarding-wizard)
 [![GitHub stars](https://img.shields.io/github/stars/username/clawdbot-onboarding-wizard?style=social)](https://github.com/username/clawdbot-onboarding-wizard)
@@ -10,24 +10,27 @@ The #1 barrier to Clawdbot adoption isn't the technology—it's **knowing where 
 
 ## ⚡ Quick Start
 
-**Prerequisites:** Install Clawdbot first!
+**Prerequisites:** Install OpenClaw first!
 
 ```bash
-# 1. Install Clawdbot (if you haven't already)
-curl -fsSL https://clawd.bot/install.sh | bash
+# 1. Install OpenClaw (if you haven't already)
+npm install -g openclaw@latest
 
-# 2. Run official Clawdbot setup
-clawdbot onboard --install-daemon
+# 2. Run official OpenClaw setup  
+openclaw onboard --install-daemon
 
-# 3. Add role-specific templates with this wizard
-npx clawdbot-onboarding-wizard init
+# 3. Clone and run this wizard (not yet published to npm)
+git clone https://github.com/yanibu2777/openclaw-role-wizard.git
+cd openclaw-role-wizard
+npm install
+npm start
 ```
 
-**This wizard enhances your Clawdbot setup** with specialized templates and workflows for your specific role.
+**This wizard enhances your OpenClaw setup** with specialized templates and workflows for your specific role.
 
 ## 🎯 What This Adds
 
-**After basic Clawdbot setup, most users still struggle with:**
+**After basic OpenClaw setup, most users still struggle with:**
 
 | Generic Setup | Role-Based Templates |
 |---------------|---------------------|
@@ -36,43 +39,46 @@ npx clawdbot-onboarding-wizard init
 | ❌ Starting from scratch with automations | ✅ Battle-tested templates for your role |
 | ❌ 3-4 weeks to get productive workflows | ✅ Productive from day 1 |
 
-**This wizard bridges the gap between "Clawdbot is running" and "Clawdbot is transforming my workflow."**
+**This wizard bridges the gap between "OpenClaw is running" and "OpenClaw is transforming my workflow."**
 
 ## 📋 Expected Workflow
 
-**Step 1: Install Clawdbot** ([Official Docs](https://docs.clawd.bot/start/getting-started))
+**Step 1: Install OpenClaw** ([Official Docs](https://docs.openclaw.ai/start/getting-started))
 ```bash
-curl -fsSL https://clawd.bot/install.sh | bash
+npm install -g openclaw@latest
 ```
 
-**Step 2: Run Official Onboarding** ([Wizard Docs](https://docs.clawd.bot/start/wizard))
+**Step 2: Run Official Onboarding** ([Wizard Docs](https://docs.openclaw.ai/start/wizard))
 ```bash
-clawdbot onboard --install-daemon
+openclaw onboard --install-daemon
 ```
 This sets up authentication, gateway, basic channels, and creates your `~/clawd` workspace.
 
-**Step 3: Add Role-Specific Templates** (This wizard!)
+**Step 3: Clone and Run Role-Specific Templates** (This wizard!)
 ```bash
-npx clawdbot-onboarding-wizard init
+git clone https://github.com/yanibu2777/openclaw-role-wizard.git
+cd openclaw-role-wizard
+npm install
+npm start
 ```
 This enhances your `~/clawd` workspace with specialized templates, automations, and workflows for your role.
 
 **Step 4: Start Working**
 ```bash
-clawdbot gateway start  # (if not already running)
-cd ~/clawd             # Your Clawdbot workspace
+openclaw gateway start  # (if not already running)
+cd ~/clawd             # Your OpenClaw workspace
 cat morning-brief.md   # See your personalized setup
 ```
 
 **Integration:** This wizard modifies and enhances your existing `~/clawd` workspace—it doesn't create a separate one.
 
-## 🔄 How It Works with Clawdbot
+## 🔄 How It Works with OpenClaw
 
 **Workspace Integration:**
 - Enhances your `~/clawd/` workspace with role-specific files
 - Adds specialized `AGENTS.md`, `HEARTBEAT.md`, and automation templates
-- Files are automatically loaded by all future Clawdbot sessions
-- No additional configuration needed—Clawdbot reads your enhanced workspace
+- Files are automatically loaded by all future OpenClaw sessions
+- No additional configuration needed—OpenClaw reads your enhanced workspace
 
 **File Integration:**
 - `~/clawd/AGENTS.md` → Instructions loaded every session
@@ -80,7 +86,7 @@ cat morning-brief.md   # See your personalized setup
 - `~/clawd/templates/` → Workflow templates for your role
 - `~/clawd/automations/` → Pre-configured automation scripts
 
-**Official Documentation:** [Agent Workspace Concepts](https://docs.clawd.bot/concepts/agent-workspace)
+**Official Documentation:** [Agent Workspace Concepts](https://docs.openclaw.ai/concepts/agent-workspace)
 
 ## 🎭 Built-in Templates
 
