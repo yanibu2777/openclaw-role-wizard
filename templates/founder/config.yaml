@@ -1,0 +1,44 @@
+name: 'Startup Founder'
+description: 'Automate business metrics, investor updates, and team management'
+skills:
+  - github
+  - notion
+  - slack
+  - trello
+  - analytics
+
+automations:
+  morning_brief:
+    schedule: '8:00 AM daily'
+    includes:
+      - revenue_metrics
+      - user_growth
+      - team_updates
+      - competitor_news
+      - calendar_overview
+  
+  investor_updates:
+    schedule: 'Weekly Friday 4:00 PM'
+    includes:
+      - key_metrics
+      - milestones_achieved
+      - challenges_blockers
+      - financial_summary
+      - team_highlights
+  
+  team_standup_prep:
+    schedule: 'Daily 9:00 AM'
+    includes:
+      - yesterday_accomplishments
+      - today_priorities
+      - blocker_identification
+      - team_capacity
+
+workflows:
+  - name: 'Revenue Tracking'
+    trigger: 'daily'
+    actions: ['collect_stripe_data', 'update_dashboard', 'alert_on_anomalies']
+  
+  - name: 'Competitor Monitoring'
+    trigger: 'daily'
+    actions: ['scan_competitor_news', 'analyze_product_updates', 'report_insights']

@@ -1,0 +1,16 @@
+name: Morning Intelligence Brief
+schedule: 8:00 AM daily
+description: Daily briefing with relevant updates and priorities
+actions:
+  - type: collect_data
+    sources:
+      - revenue_metrics
+      - user_growth
+      - team_updates
+      - competitor_news
+  - type: generate_summary
+    format: markdown
+    output: morning-brief.md
+  - type: notify
+    method: console
+    message: Your morning brief is ready!

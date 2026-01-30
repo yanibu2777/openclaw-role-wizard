@@ -1,0 +1,44 @@
+name: 'Software Engineer'
+description: 'Automate code reviews, OSS tracking, and technical learning'
+skills:
+  - github
+  - slack
+  - notion
+  - coding-agent
+  - tmux
+
+automations:
+  morning_brief:
+    schedule: '8:00 AM daily'
+    includes:
+      - pr_reviews_pending
+      - ci_cd_status
+      - github_notifications
+      - tech_news
+      - learning_progress
+  
+  code_review_assistant:
+    schedule: 'On PR creation'
+    includes:
+      - security_scan
+      - performance_analysis
+      - test_coverage_check
+      - documentation_gaps
+      - best_practice_suggestions
+  
+  oss_contribution_tracker:
+    schedule: 'Weekly Sunday'
+    includes:
+      - contribution_summary
+      - project_health_check
+      - community_engagement
+      - skill_development_areas
+
+workflows:
+  - name: 'Automated Code Reviews'
+    trigger: 'pr_opened'
+    actions: ['analyze_code_quality', 'check_security', 'suggest_improvements']
+  
+  - name: 'Tech Learning Path'
+    trigger: 'weekly'
+    actions: ['assess_skill_gaps', 'recommend_resources', 'track_progress']

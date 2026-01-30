@@ -1,0 +1,12 @@
+name: Weekly Investor Update Prep
+schedule: Weekly Friday 4:00 PM
+description: Prepare weekly investor update with key metrics and highlights
+actions:
+  - type: collect_metrics
+    sources:
+      - revenue
+      - user_growth
+      - team_updates
+  - type: generate_report
+    template: investor_update
+    output: weekly-investor-update.md

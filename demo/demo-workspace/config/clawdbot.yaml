@@ -1,0 +1,46 @@
+workspace:
+  name: founder-ai-employee
+  description: AI employee setup for startup founder
+  created: 2026-01-29T22:01:22.558Z
+  user_type: founder
+skills:
+  - name: github
+    enabled: true
+    auto_install: true
+  - name: notion
+    enabled: true
+    auto_install: true
+  - name: slack
+    enabled: true
+    auto_install: true
+  - name: trello
+    enabled: true
+    auto_install: true
+  - name: analytics
+    enabled: true
+    auto_install: true
+integrations:
+  email:
+    provider: gmail
+  calendar:
+    provider: google
+  slack:
+    features:
+      - team_updates
+  analytics:
+    provider: google
+automations:
+  morning_brief:
+    schedule: 8:00 AM daily
+    includes:
+      - revenue_metrics
+      - user_growth
+      - team_updates
+      - competitor_news
+  investor_updates:
+    schedule: Weekly Friday 4:00 PM
+    includes:
+      - key_metrics
+      - milestones_achieved
+      - challenges_blockers
+workflows: []

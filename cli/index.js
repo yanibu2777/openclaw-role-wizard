@@ -1,0 +1,45 @@
+#!/usr/bin/env node
+
+const { Command } = require('commander');
+const chalk = require('chalk');
+const { runWizard } = require('./wizard');
+const { version } = require('../package.json');
+
+const program = new Command();
+
+program
+  .name('clawdbot-onboarding-wizard')
+  .description('Transform from "I downloaded Clawdbot, now what?" to productive AI employee in 5 minutes')
+  .version(version);
+
+program
+  .command('init')
+  .description('Start the interactive onboarding wizard')
+  .option('-t, --template <type>', 'Pre-select template type (founder|engineer|creator|student)')
+  .option('--skip-checks', 'Skip system requirement checks')
+  .action(async (options) => {
+    try {
+      console.log(chalk.blue('\n🎯 Welcome to Clawdbot Onboarding Wizard!'));
+      console.log('Transforming "now what?" into productive AI employee...\n');
+      
+      await runWizard(options);
+    } catch (error) {
+      console.error(chalk.red('❌ Setup failed:'), error.message);
+      process.exit(1);
+    }
+  });
+
+program
+  .command('test')
+  .description('Test the wizard without making changes')
+  .action(async () => {
+    console.log(chalk.yellow('🧪 Running wizard in test mode...'));
+    await runWizard({ testMode: true });
+  });
+
+// Default command when no args provided
+if (process.argv.length === 2) {
+  program.help();
+}
+
+program.parse();
