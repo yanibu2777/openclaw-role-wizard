@@ -2,10 +2,9 @@ name: 'Startup Founder'
 description: 'Automate business metrics, investor updates, and team management'
 skills:
   - github
-  - notion
+  - notion  
   - slack
-  - trello
-  - analytics
+  - weather
 
 automations:
   morning_brief:

@@ -26,7 +26,7 @@ npm install
 npm start init
 ```
 
-**This wizard enhances your OpenClaw setup** with specialized templates and workflows for your specific role.
+**This wizard enhances your OpenClaw workspace** with role-specific configuration templates that help you use the official OpenClaw skills more effectively.
 
 ## 🎯 What This Adds
 
@@ -70,7 +70,16 @@ cd ~/clawd             # Your OpenClaw workspace
 cat morning-brief.md   # See your personalized setup
 ```
 
-**Integration:** This wizard modifies and enhances your existing `~/clawd` workspace—it doesn't create a separate one.
+**What This Wizard Does:**
+- ✅ Configures your `~/clawd` workspace with role-specific templates
+- ✅ Sets up `AGENTS.md`, `HEARTBEAT.md` with your role's best practices  
+- ✅ Guides you to use the right **official OpenClaw skills**
+- ✅ Creates role-based automation workflows
+
+**What This Wizard Does NOT Do:**
+- ❌ Install custom/independent skills (uses official OpenClaw skills only)
+- ❌ Replace OpenClaw functionality (enhances workspace configuration)
+- ❌ Create separate installation (works with your existing OpenClaw)
 
 ## 🔄 How It Works with OpenClaw
 
