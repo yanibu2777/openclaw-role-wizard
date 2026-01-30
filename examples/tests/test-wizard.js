@@ -79,8 +79,42 @@ async function runTests() {
     console.log(`   Skills: ${engineerConfig.workspace.skills.join(', ')}`);
     console.log(`   Automations: ${Object.keys(engineerConfig.template.automations).length}\n`);
 
-    // Test 3: Validate workspace creation (without actually creating files)
-    console.log('📋 Test 3: Workspace validation');
+    // Test 3: Creator template
+    console.log('📋 Test 3: Creator template');
+    
+    const mockCreatorAnswers = {
+      userType: 'creator',
+      goals: ['content_scheduling', 'analytics', 'trend_research'],
+      tools: ['social', 'analytics', 'design'],
+      experience: 'intermediate',
+      proceed: true
+    };
+    
+    const creatorConfig = await testTemplateConfig('creator', mockCreatorAnswers);
+    
+    console.log('✅ Creator template test passed');
+    console.log(`   Skills: ${creatorConfig.workspace.skills.join(', ')}`);
+    console.log(`   Automations: ${Object.keys(creatorConfig.template.automations).length}\n`);
+
+    // Test 4: Student template
+    console.log('📋 Test 4: Student template');
+    
+    const mockStudentAnswers = {
+      userType: 'student',
+      goals: ['research_organization', 'deadline_tracking', 'study_optimization'],
+      tools: ['research', 'citations', 'github'],
+      experience: 'beginner',
+      proceed: true
+    };
+    
+    const studentConfig = await testTemplateConfig('student', mockStudentAnswers);
+    
+    console.log('✅ Student template test passed');
+    console.log(`   Skills: ${studentConfig.workspace.skills.join(', ')}`);
+    console.log(`   Automations: ${Object.keys(studentConfig.template.automations).length}\n`);
+
+    // Test 5: Validate workspace creation (without actually creating files)
+    console.log('📋 Test 5: Workspace validation');
     const testWorkspacePath = path.join(__dirname, 'test-workspace');
     
     // Clean up any existing test workspace
@@ -90,22 +124,26 @@ async function runTests() {
     
     console.log('✅ Workspace validation test passed\n');
 
-    // Test 4: Template loading
-    console.log('📋 Test 4: Template loading');
+    // Test 6: Template loading
+    console.log('📋 Test 6: Template loading for all roles');
     
     const founderTemplate = await loadTemplate('founder');
     const engineerTemplate = await loadTemplate('engineer');
+    const creatorTemplate = await loadTemplate('creator');
+    const studentTemplate = await loadTemplate('student');
     
-    if (founderTemplate.name && engineerTemplate.name) {
-      console.log('✅ Template loading test passed');
+    if (founderTemplate.name && engineerTemplate.name && creatorTemplate.name && studentTemplate.name) {
+      console.log('✅ All template loading test passed');
       console.log(`   Founder template: ${founderTemplate.name}`);
-      console.log(`   Engineer template: ${engineerTemplate.name}\n`);
+      console.log(`   Engineer template: ${engineerTemplate.name}`);
+      console.log(`   Creator template: ${creatorTemplate.name}`);
+      console.log(`   Student template: ${studentTemplate.name}\n`);
     } else {
       throw new Error('Template loading failed');
     }
 
-    // Test 5: Configuration generation
-    console.log('📋 Test 5: Configuration generation');
+    // Test 7: Configuration generation
+    console.log('📋 Test 7: Configuration generation');
     
     const testConfig = {
       user: { type: 'founder', goals: ['metrics', 'investors'] },
@@ -122,8 +160,10 @@ async function runTests() {
     console.log('📊 Test Results:');
     console.log('   ✅ Founder template loading and configuration');
     console.log('   ✅ Engineer template loading and configuration');
+    console.log('   ✅ Creator template loading and configuration');
+    console.log('   ✅ Student template loading and configuration');
     console.log('   ✅ Workspace structure validation');
-    console.log('   ✅ Template system functioning');
+    console.log('   ✅ All template systems functioning');
     console.log('   ✅ Configuration generation working');
     
     console.log('\n🚀 Ready for real usage! Try:');
