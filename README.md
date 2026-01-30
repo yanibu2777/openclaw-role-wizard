@@ -2,8 +2,6 @@
 
 > **Go beyond basic OpenClaw setup: Get role-specific templates and workflows that make you productive immediately.**
 
-[![npm version](https://img.shields.io/npm/v/clawdbot-onboarding-wizard)](https://www.npmjs.com/package/clawdbot-onboarding-wizard)
-[![GitHub stars](https://img.shields.io/github/stars/username/clawdbot-onboarding-wizard?style=social)](https://github.com/username/clawdbot-onboarding-wizard)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 The #1 barrier to Clawdbot adoption isn't the technology—it's **knowing where to start**. This wizard eliminates the blank screen paralysis and gets you to productivity immediately.
